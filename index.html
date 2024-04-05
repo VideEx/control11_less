@@ -1,0 +1,599 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tea Shop</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="dist/css/style.min.css"/>
+    <!--    <link rel="stylesheet" type="text/css" href="dist/css/styles/adaptive.min.css" />-->
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+
+
+    <!--    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>-->
+    <!--    // Add the new slick-theme.css if you want the default styling-->
+    <!--    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>-->
+
+</head>
+
+<body>
+
+
+<header class="header">
+    <div class="container header__container">
+        <div class="header__logo">
+            <svg id="логотип" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60"
+                 height="61" viewBox="0 0 60 61">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: #fff;
+                        }
+
+                        .cls-2 {
+                            font-size: 8px;
+                            fill: #181816;
+                            font-family: AGBookPro;
+                        }
+                    </style>
+                </defs>
+                <circle id="лого" class="cls-1" cx="32.5" cy="33.5" r="27.5"/>
+                <image id="лого_копия" data-name="лого копия" width="57" height="57"
+                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA5CAYAAACMGIOFAAAFF0lEQVRogd2bbYgUdRzHP7unlmVd3mV21VVeKocUembREwkmPUDXcymRookRkRESgS9UqldFr6TogaiuB8rKFKIQhYtUMNGeri7Mx+xMu7seSC/Pylvlt3xn2Zvmtpndmdmd/cIxMNzM/r/7e37YVGNjIxEhDWT06uHAxcBI4C/gF6A7qg92Y1gE7xwnMg3APcAVIrRHZM8BJgBjgePAz8DXwDbgS2A70AscC+tAYUryVmCyDn8T0AO8C+wCTgf6gd90v1fPjAEmAdOAiUAt8DvwBbAK2B3GwUohmZIkjNwiqaBpxmbgZZEaqatfNAGXATOAG/SFvAa8CfTFTfJU4ELgJeBf4D2gE9hQ7EE8YBpxIzBT9r0SaC+GbE1tbW3QZ8YD90laLwDPAuuBfUWSGQrmoL4FdsrOzb5Hy2aPBHlRUEmaCs0DLgDuBH6VJOPAJcAK4GRgAfC9388MIsmFenkXcJfUJuPjubBg9tkGnAS8oi/4mzBJLgeuA9YAT8VIzAtbFWqWAmf58QN+SD4JXKpv8Y2oTh4QXbLVRXKCnxd6vBBJCxH3y/aeBj4qM7F8WOjaq78lir/bdf8/KESyWdJ7CPhsqBeUGXtkq8uVNe0PQrIeeEcG/j4wUIEEHZiXtcxpruLoIfc/pD0eMtZzlL08V+EEHTxhAgPmy/sOghdJ86I3A4/FGAPDwCzgYeAi+ZMc3CRNTVulApsSRBAl/RYJnnf7DzfJ2bq2xXe2ULFKatua/1I3SUvZPgU6kskxWwl9ILXNIZ/kBDmdtQmzRTc26fwznBsOyRrVhe2KO0lGh2rY6Y4DckjWq6pvTzhB1DZZLy9rNWmO5ES1IraU93yhwQrsayS8HMkWlU5dyeeXxZ9K8azuTTkkraP2Q8z1YZQYrnBym8VMh+RkvwVoQjAgoVkXMKeu5wZpJyQAGUUMK8FOcUja9WAVkUSp3Y/mVI3cmeqXVIs9OjBOI4DTjOTZaiWcURlnCw0HZIZ9RnKU3G1DlZBzcBg438wwrUbtMaltNWGEmtE9aalqU0QTrnKiTh42k1YyWyfH49UpSCqaVXrlSG2T/laTNFs0AsyStHJkNXA78E/5zxYKUqqPv0IknaA5TkVzNeA8mWCOpOEPzRTurRKSl6sS2UEeyV4ltNdXiV3OlD1mly8ckqayGxVbppT3fCWjXr3jD53livyQsUFkr00mtyyGaVDcp/ifhTsu2nj8Fq2hJBHNamAN6hu7SX4sabYmlORcmdzb+TfdJC2+PKgByph4z1cyrlICsFZlVg5ukk7MtAWEtxJE0Ho6zwDr9DcIXrnq39LpjCRa6TDtm61rm2L+/5JEBadNiO7QSKySYR7VspsHhur+FxqnH5RuL9NsPpQ9t4jQUahHVYjkca2Smb4v1nx+XwXuDth5Cg6o/Ky4bFEW8aikWckS9YTfZaWNckgvqnG7Of6jFo8gnYDXlfjerRSwJcZzllQ0BN2S7FaBbUu6j2ght0cOKipbtf7T1WpKdRfTHy5mFbQ/bzHIsowrrYGrfkrRi7cemK4tlMdVNLyqGjEwSl3PHqXd1/kaeK7TIHervLFf6dp651FdF0pyKRUKK7QwlSpWW8LcQW9S8jBFee8hVeadkvwBtQjr1bWv0/LfYbVeZonUJ1LLTi05lIywfzJRI4I2uZ6qkeBU9VwGRPwnqXq/hqQN6hau1P2j0oLQEOXvQrxg+6k2nzAbtvXr7xSaDPm/IwkPwAkGRxful0HEdwAAAABJRU5ErkJggg=="/>
+                <text id="TEA_LOVERS" data-name="TEA LOVERS" class="cls-2" x="13.802" y="24.906">TEA
+                    <tspan x="13.802" dy="9.6">LOVERS</tspan>
+                </text>
+            </svg>
+        </div>
+
+        <div class="header__actions">
+            <nav class="menu">
+                <ul class="menu__items">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            О нас
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            Наш ассортимент
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            Оформить заказ
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="btn">
+                Связаться с нами
+            </button>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <div class="container main__container">
+        <h1>Эксклюзивный личтовой чай <span class="main__span">с разных уголков планеты</span></h1>
+        <div class="main__info">
+            <h2 class="main__title">
+                У нас вы сможете найти чай со всего мира, самых невообразимых ыкусов и ароматов
+            </h2>
+
+            <div class="main__description">
+                <p>
+                    Чайные листочки мы собираем столько раз в году, сколько раз чай вегетирует – то есть, дает новые
+                    побеги
+                    с листочками. В Индонезии, Шри-Ланке, Кении, на юге Индии и Китая, где всегда лето – круглый год.
+                    Чем
+                    дальше на север расположены плантации, тем меньше сезон сбора чая – в северо-восточной Индии он
+                    продолжается восемь месяцев, на севере Китая чайные листья собирают не более четырех раз в году, с
+                    апреля по сентябрь
+                </p>
+                <p>
+                    Мы собираем чай вручную, обрывая не все листья, а лишь несколько самых молодых и сочных листочков с
+                    частью стебелька, на котором они укреплены, и так называемую почку (или типс) – нераспустившийся
+                    листок на кончике побега. Всё для того, чтобы вы пили только самый вкусный и свежий чай!
+                </p>
+                <button class="btn">
+                    Посмотреть ассортимент
+                </button>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<section class="advantages">
+    <div class="container advantages__container">
+        <h2 class="advantages__title">
+            6 качеств нашего чая,
+            <span class="advantages__span">
+                которые вы оцените
+            </span>
+        </h2>
+
+        <div class="advantage">
+            <div class="advantages__img">
+                <img src="img/tea.png" alt="">
+            </div>
+            <div class="advantages__img">
+                <img src="img/orange.png" alt="">
+            </div>
+
+            <div class="advantage__items">
+                <div class="advantage__item">
+                    <div class="advantage__img">
+                        <img src="img/item1.png" alt="">
+                    </div>
+                    <div class="advantage__description">
+                        Подавляет рост злокачественных опухолей, и существенно снижает риск перерождения клеток в
+                        раковые
+                    </div>
+                </div>
+                <div class="advantage__item">
+                    <div class="advantage__img">
+                        <img src="img/item2.png" alt="">
+                    </div>
+                    <div class="advantage__description">
+                        Подавляет рост злокачественных опухолей, и существенно снижает риск перерождения клеток в
+                        раковые
+                    </div>
+                </div>
+                <div class="advantage__item">
+                    <div class="advantage__img">
+                        <img src="img/item3.png" alt="">
+                    </div>
+                    <div class="advantage__description">
+                        Подавляет рост злокачественных опухолей, и существенно снижает риск перерождения клеток в
+                        раковые
+                    </div>
+                </div>
+                <div class="advantage__item">
+                    <div class="advantage__img">
+                        <img src="img/item4.png" alt="">
+                    </div>
+                    <div class="advantage__description">
+                        Подавляет рост злокачественных опухолей, и существенно снижает риск перерождения клеток в
+                        раковые
+                    </div>
+                </div>
+                <div class="advantage__item">
+                    <div class="advantage__img">
+                        <img src="img/item5.png" alt="">
+                    </div>
+                    <div class="advantage__description">
+                        Подавляет рост злокачественных опухолей, и существенно снижает риск перерождения клеток в
+                        раковые
+                    </div>
+                </div>
+                <div class="advantage__item">
+                    <div class="advantage__img">
+                        <img src="img/item6.png" alt="">
+                    </div>
+                    <div class="advantage__description">
+                        Подавляет рост злокачественных опухолей, и существенно снижает риск перерождения клеток в
+                        раковые
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="products">
+    <div class="container">
+        <div class="slider">
+            <div class="products__list">
+                <div class="slide">
+                    <div class="slide__container">
+                        <div class="slide__info">
+                            <h3 class="slide__title">
+                                Сладкий апельсин
+                            </h3>
+                            <div class="slide__description">
+                                <div class="slide__action">
+                                    <button type="button" class="but counterBut dec">-</button>
+                                    <input type="text" class="field fieldCount" value="1" data-min="0" data-max="5">
+                                    <button type="button" class="but counterBut inc">+</button>
+                                </div>
+                                <div class="slide__price">
+                                    4,50 руб.
+                                </div>
+                                <div class="slide__button">
+                                    <button class="btn">
+                                        Заказать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide__img">
+                            <img src="img/tea1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide__container">
+                        <div class="slide__info">
+                            <h3 class="slide__title">
+                                Сладкий апельсин
+                            </h3>
+                            <div class="slide__description">
+                                <div class="slide__action">
+                                    <button type="button" class="but counterBut dec">-</button>
+                                    <input type="text" class="field fieldCount" value="1" data-min="0" data-max="5">
+                                    <button type="button" class="but counterBut inc">+</button>
+                                </div>
+                                <div class="slide__price">
+                                    4,50 руб.
+                                </div>
+                                <div class="slide__button">
+                                    <button class="btn">
+                                        Заказать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide__img">
+                            <img src="img/tea1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide__container">
+                        <div class="slide__info">
+                            <h3 class="slide__title">
+                                Сладкий апельсин
+                            </h3>
+                            <div class="slide__description">
+                                <div class="slide__action">
+                                    <button type="button" class="but counterBut dec">-</button>
+                                    <input type="text" class="field fieldCount" value="1" data-min="0" data-max="5">
+                                    <button type="button" class="but counterBut inc">+</button>
+                                </div>
+                                <div class="slide__price">
+                                    4,50 руб.
+                                </div>
+                                <div class="slide__button">
+                                    <button class="btn">
+                                        Заказать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide__img">
+                            <img src="img/tea1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide__container">
+                        <div class="slide__info">
+                            <h3 class="slide__title">
+                                Сладкий апельсин
+                            </h3>
+                            <div class="slide__description">
+                                <div class="slide__action">
+                                    <button type="button" class="but counterBut dec">-</button>
+                                    <input type="text" class="field fieldCount" value="1" data-min="0" data-max="5">
+                                    <button type="button" class="but counterBut inc">+</button>
+                                </div>
+                                <div class="slide__price">
+                                    4,50 руб.
+                                </div>
+                                <div class="slide__button">
+                                    <button class="btn">
+                                        Заказать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide__img">
+                            <img src="img/tea1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide__container">
+                        <div class="slide__info">
+                            <h3 class="slide__title">
+                                Сладкий апельсин
+                            </h3>
+                            <div class="slide__description">
+                                <div class="slide__action">
+                                    <button type="button" class="but counterBut dec">-</button>
+                                    <input type="text" class="field fieldCount" value="1" data-min="0" data-max="5">
+                                    <button type="button" class="but counterBut inc">+</button>
+                                </div>
+                                <div class="slide__price">
+                                    4,50 руб.
+                                </div>
+                                <div class="slide__button">
+                                    <button class="btn">
+                                        Заказать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide__img">
+                            <img src="img/tea1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide__container">
+                        <div class="slide__info">
+                            <h3 class="slide__title">
+                                Сладкий апельсин
+                            </h3>
+                            <div class="slide__description">
+                                <div class="slide__action">
+                                    <button type="button" class="but counterBut dec">-</button>
+                                    <input type="text" class="field fieldCount" value="1" data-min="0" data-max="5">
+                                    <button type="button" class="but counterBut inc">+</button>
+                                </div>
+                                <div class="slide__price">
+                                    4,50 руб.
+                                </div>
+                                <div class="slide__button">
+                                    <button class="btn">
+                                        Заказать
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide__img">
+                            <img src="img/tea1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sell">
+    <div class="container sell__container">
+        <div class="sell__absolute-img">
+            <img src="img/oranges.png" alt="">
+        </div>
+        <div class="sell_img">
+            <img src="img/cup.png" alt="">
+        </div>
+        <div class="sell__info">
+            <h2 class="sell__title">
+                Выберите чай и получите скидку 5%
+                на ваш первый заказ
+            </h2>
+
+            <button class="btn">
+                Оформить заказ
+            </button>
+        </div>
+    </div>
+
+</section>
+
+<section class="find">
+    <div class="container find__container">
+        <div class="find__img">
+            <img src="img/tea-elips.png" alt="">
+        </div>
+        <div class="find__img">
+            <img src="img/limon.png" alt="">
+        </div>
+        <h2 class="find__title">
+            У нас вы найдете
+            <span class="find__span">все необходимое</span>
+        </h2>
+    </div>
+
+    <div class="find__info">
+        <div class="container find__info-container">
+            <div class="find__item">
+                <h3 class="find__description-title">Качественный и свежий чай</h3>
+                <p class="find__description">
+                    Мы завариваем и дегустируем чай снова и снова, пока не найдем идеальный вкус, поэтому в нашем
+                    каталоге
+                    собраны только лучшие сорта с самых известных плантаций мира
+                </p>
+            </div>
+            <div class="find__item">
+                <h3 class="find__description-title">Эксклюзивные чайные миксы</h3>
+                <p class="find__description">
+                    Попробуйте наши миксы, созданные на основе кулинарных тенденций, миксологии и вдохновения
+                </p>
+                <h3 class="find__description-title">Чайные аксессуары</h3>
+                <p class="find__description">
+                    У нас вы найдете всю необходимую посуду для правильного хранения, заваривания и подачи чая
+                </p>
+
+                <h3 class="find__description-title">Подарочные наборы</h3>
+                <p class="find__description">
+                    Мы соберем в красивую упаковку именной подарочный набор для ваших близких, чтобы они могли по
+                    достоинству оценить вашу заботу и все вкусовые качества нашего чая
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reviews">
+    <div class="container reviews__container">
+        <h2 class="reviews__title">
+            За нас все скажут
+            наши клинты
+        </h2>
+
+        <div class="slider">
+            <div class="reviews-list">
+                <div>your content</div>
+                <div>your content</div>
+                <div>your content</div>
+                <div>your content</div>
+                <div>your content</div>
+                <div>your content</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contacts">
+    <div class="container contacts__container">
+        <div class="contacts__absolute-img">
+            <img src="img/tree.png" alt="">
+        </div>
+        <div class="contacts__img">
+            <img src="img/contacts-img.png" alt="">
+        </div>
+        <div class="contacts__info">
+            <h2 class="contacts__title">
+                Контактная информация
+            </h2>
+
+            <div class="location">
+                <h3 class="location__title">
+                    Пункты самовывоза:
+                </h3>
+                <div class="location__item">
+                    <svg id="location_копия_2" data-name="location копия 2" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="24" viewBox="0 0 16 24">
+                        <image id="placeholder" width="16" height="24"
+                               xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAYCAYAAADzoH0MAAABs0lEQVQ4jY3UT0uUURQG8J+jjruIMSeUCIuINi2EbCcEVos+RkEg7QI/Q9AXyP7Qri9gkiBtioKkIqSNRrOTcNHCXbhI4g7PxOvMOM4Dh/e85zzPufeec7kjenEJd3EbZ5L9jQ28xM8+mjbqeIxtLGGmkptJbDucerd4HKtY6Uo2Y9VFVsIdrxZ4hGfxR7GMFr7EWomNhvM0mjZm8QMTIazhOSYrC0wmthbORDSz5ech3uJTVilbu48/lQLFf40buIL3+IuFktzEOYxkq6eP63JyrXCLZrOWJu1iGnvYH1BgP5zpaJqlwGGlwwcDxB0cVCZ1WEvFC6l4sd+MK6iHsxvNXmniWVzGx0zkKj4cU2A54je4l344j68hnMIWHqBWEdYS2wpHNEXbxkZnJGjgFXbwIraTWCOchWj+42auZxVTuBWb6sqtRnMEnzE3xBTmwu3BHawPUWA93L54h8UB4sVwjsV8Oj3WhzCW3Hw1ONpF+oXreUC6z7mU75OTztjMBWlUYo3EmgN0R1AuTeeBKSh+iQ2NcrRvuTDFit993BNxDd9jxe+Lft3uoLyF5Qnr+L3APwHhV+QHToVCAAAAAElFTkSuQmCC"/>
+                    </svg>
+                    <p class="location__address">
+                        г. Минск, ул. Озерная, 5
+                    </p>
+                </div>
+                <div class="location__item">
+                    <svg id="location_копия_2" data-name="location копия 2" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="24" viewBox="0 0 16 24">
+                        <image id="placeholder" width="16" height="24"
+                               xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAYCAYAAADzoH0MAAABs0lEQVQ4jY3UT0uUURQG8J+jjruIMSeUCIuINi2EbCcEVos+RkEg7QI/Q9AXyP7Qri9gkiBtioKkIqSNRrOTcNHCXbhI4g7PxOvMOM4Dh/e85zzPufeec7kjenEJd3EbZ5L9jQ28xM8+mjbqeIxtLGGmkptJbDucerd4HKtY6Uo2Y9VFVsIdrxZ4hGfxR7GMFr7EWomNhvM0mjZm8QMTIazhOSYrC0wmthbORDSz5ech3uJTVilbu48/lQLFf40buIL3+IuFktzEOYxkq6eP63JyrXCLZrOWJu1iGnvYH1BgP5zpaJqlwGGlwwcDxB0cVCZ1WEvFC6l4sd+MK6iHsxvNXmniWVzGx0zkKj4cU2A54je4l344j68hnMIWHqBWEdYS2wpHNEXbxkZnJGjgFXbwIraTWCOchWj+42auZxVTuBWb6sqtRnMEnzE3xBTmwu3BHawPUWA93L54h8UB4sVwjsV8Oj3WhzCW3Hw1ONpF+oXreUC6z7mU75OTztjMBWlUYo3EmgN0R1AuTeeBKSh+iQ2NcrRvuTDFit993BNxDd9jxe+Lft3uoLyF5Qnr+L3APwHhV+QHToVCAAAAAElFTkSuQmCC"/>
+                    </svg>
+                    <p class="location__address">
+                        г. Минск, ТЦ «Метрополь», 2 этаж
+                    </p>
+                </div>
+                <div class="location__item">
+                    <svg id="location_копия_2" data-name="location копия 2" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="24" viewBox="0 0 16 24">
+                        <image id="placeholder" width="16" height="24"
+                               xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAYCAYAAADzoH0MAAABs0lEQVQ4jY3UT0uUURQG8J+jjruIMSeUCIuINi2EbCcEVos+RkEg7QI/Q9AXyP7Qri9gkiBtioKkIqSNRrOTcNHCXbhI4g7PxOvMOM4Dh/e85zzPufeec7kjenEJd3EbZ5L9jQ28xM8+mjbqeIxtLGGmkptJbDucerd4HKtY6Uo2Y9VFVsIdrxZ4hGfxR7GMFr7EWomNhvM0mjZm8QMTIazhOSYrC0wmthbORDSz5ech3uJTVilbu48/lQLFf40buIL3+IuFktzEOYxkq6eP63JyrXCLZrOWJu1iGnvYH1BgP5zpaJqlwGGlwwcDxB0cVCZ1WEvFC6l4sd+MK6iHsxvNXmniWVzGx0zkKj4cU2A54je4l344j68hnMIWHqBWEdYS2wpHNEXbxkZnJGjgFXbwIraTWCOchWj+42auZxVTuBWb6sqtRnMEnzE3xBTmwu3BHawPUWA93L54h8UB4sVwjsV8Oj3WhzCW3Hw1ONpF+oXreUC6z7mU75OTztjMBWlUYo3EmgN0R1AuTeeBKSh+iQ2NcrRvuTDFit993BNxDd9jxe+Lft3uoLyF5Qnr+L3APwHhV+QHToVCAAAAAElFTkSuQmCC"/>
+                    </svg>
+                    <p class="location__address">
+                        г. Минск, пр-т Некрасова, 25
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="time">
+                <p class="time__item">
+                    Пн-Пт с 10:00 до 20:00
+                </p>
+                <p class="time__item">
+                    Сб-Вс с 10:00 до 18:00
+                </p>
+            </div>
+            <div class="phone">
+                <h3 class="phone__title">
+                    Телефоны:
+                </h3>
+                <div class="phone__items">
+                    <p class="phone__item">
+                        +375 (29) 384-66-76
+                    </p>
+                    <p class="phone__item">
+                        +375 (44) 584-76-86
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer__container">
+        <div class="footer__logo">
+            <svg id="логотип" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60"
+                 height="61" viewBox="0 0 60 61">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: #fff;
+                        }
+
+                        .cls-2 {
+                            font-size: 8px;
+                            fill: #181816;
+                            font-family: AGBookPro;
+                        }
+                    </style>
+                </defs>
+                <circle id="лого" class="cls-1" cx="32.5" cy="33.5" r="27.5"/>
+                <image id="лого_копия" data-name="лого копия" width="57" height="57"
+                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA5CAYAAACMGIOFAAAFF0lEQVRogd2bbYgUdRzHP7unlmVd3mV21VVeKocUembREwkmPUDXcymRookRkRESgS9UqldFr6TogaiuB8rKFKIQhYtUMNGeri7Mx+xMu7seSC/Pylvlt3xn2Zvmtpndmdmd/cIxMNzM/r/7e37YVGNjIxEhDWT06uHAxcBI4C/gF6A7qg92Y1gE7xwnMg3APcAVIrRHZM8BJgBjgePAz8DXwDbgS2A70AscC+tAYUryVmCyDn8T0AO8C+wCTgf6gd90v1fPjAEmAdOAiUAt8DvwBbAK2B3GwUohmZIkjNwiqaBpxmbgZZEaqatfNAGXATOAG/SFvAa8CfTFTfJU4ELgJeBf4D2gE9hQ7EE8YBpxIzBT9r0SaC+GbE1tbW3QZ8YD90laLwDPAuuBfUWSGQrmoL4FdsrOzb5Hy2aPBHlRUEmaCs0DLgDuBH6VJOPAJcAK4GRgAfC9388MIsmFenkXcJfUJuPjubBg9tkGnAS8oi/4mzBJLgeuA9YAT8VIzAtbFWqWAmf58QN+SD4JXKpv8Y2oTh4QXbLVRXKCnxd6vBBJCxH3y/aeBj4qM7F8WOjaq78lir/bdf8/KESyWdJ7CPhsqBeUGXtkq8uVNe0PQrIeeEcG/j4wUIEEHZiXtcxpruLoIfc/pD0eMtZzlL08V+EEHTxhAgPmy/sOghdJ86I3A4/FGAPDwCzgYeAi+ZMc3CRNTVulApsSRBAl/RYJnnf7DzfJ2bq2xXe2ULFKatua/1I3SUvZPgU6kskxWwl9ILXNIZ/kBDmdtQmzRTc26fwznBsOyRrVhe2KO0lGh2rY6Y4DckjWq6pvTzhB1DZZLy9rNWmO5ES1IraU93yhwQrsayS8HMkWlU5dyeeXxZ9K8azuTTkkraP2Q8z1YZQYrnBym8VMh+RkvwVoQjAgoVkXMKeu5wZpJyQAGUUMK8FOcUja9WAVkUSp3Y/mVI3cmeqXVIs9OjBOI4DTjOTZaiWcURlnCw0HZIZ9RnKU3G1DlZBzcBg438wwrUbtMaltNWGEmtE9aalqU0QTrnKiTh42k1YyWyfH49UpSCqaVXrlSG2T/laTNFs0AsyStHJkNXA78E/5zxYKUqqPv0IknaA5TkVzNeA8mWCOpOEPzRTurRKSl6sS2UEeyV4ltNdXiV3OlD1mly8ckqayGxVbppT3fCWjXr3jD53livyQsUFkr00mtyyGaVDcp/ifhTsu2nj8Fq2hJBHNamAN6hu7SX4sabYmlORcmdzb+TfdJC2+PKgByph4z1cyrlICsFZlVg5ukk7MtAWEtxJE0Ho6zwDr9DcIXrnq39LpjCRa6TDtm61rm2L+/5JEBadNiO7QSKySYR7VspsHhur+FxqnH5RuL9NsPpQ9t4jQUahHVYjkca2Smb4v1nx+XwXuDth5Cg6o/Ky4bFEW8aikWckS9YTfZaWNckgvqnG7Of6jFo8gnYDXlfjerRSwJcZzllQ0BN2S7FaBbUu6j2ght0cOKipbtf7T1WpKdRfTHy5mFbQ/bzHIsowrrYGrfkrRi7cemK4tlMdVNLyqGjEwSl3PHqXd1/kaeK7TIHervLFf6dp651FdF0pyKRUKK7QwlSpWW8LcQW9S8jBFee8hVeadkvwBtQjr1bWv0/LfYbVeZonUJ1LLTi05lIywfzJRI4I2uZ6qkeBU9VwGRPwnqXq/hqQN6hau1P2j0oLQEOXvQrxg+6k2nzAbtvXr7xSaDPm/IwkPwAkGRxful0HEdwAAAABJRU5ErkJggg=="/>
+                <text id="TEA_LOVERS" data-name="TEA LOVERS" class="cls-2" x="13.802" y="24.906">TEA
+                    <tspan x="13.802" dy="9.6">LOVERS</tspan>
+                </text>
+            </svg>
+        </div>
+        <div class="footer__info">
+            <div class="social-network">
+                <div class="social-network__title">
+                    Соц. сети:
+                </div>
+                <div class="social-network__items">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24"
+                         height="24" viewBox="0 0 24 24">
+                        <image id="instagram" width="24" height="24"
+                               xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABnUlEQVRIibWWPWsUURSGn90YP8C0CjYBK+0CWlpYmFJBQXRLf0RKYWDt0+QPaLf+AtlmCSndKgRdRSUgip0fqAgu+8iVM2EDM3dnye4LlxnuuXPe855zz2FQ0+qor9SJJ8ckfHWKoqB0vix0WokNuMrJ8QcYA+enPL1mQWl5qp5R2+qTqf1JUuACor8I3AcuAY+B76WSU3M4+QwcACmgK8D6lO0c8CXeV4/5bSB/qN5UW3HjynVdHcSZF+q6eiHSdYRZBD31tHpL7avf1J/qrnpXXVF3cg5yBPtRuK3Mme0gGdQdyBX5DvAV2JtRm3vAR+BlpbWG+Ie6qj7PyQ/spo5VD6uM7ZqoPgB/gY0Z0Sdci+eoylhHUO5PGhCM49mqtNbI/qWeVZ81SFE/avmpypgr8kPgDTAEVjIKNkPFYB4FCe/UNfWROq45sxV9MqxzMqvR+kGyEekaqW/jdt2IPunlHDQZFUnJg6hJOSbSFb4dzZjFPNP0N/A+btZlYK3JR4sa17Vox/hdFv53cmUHLgijRNBdIkF3ub8tRcE/Xnl9dmtmvNoAAAAASUVORK5CYII="/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25"
+                         height="25" viewBox="0 0 25 25">
+                        <image id="vk-reproductor" width="25" height="25"
+                               xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAABvElEQVRIie3WT4hNURwH8M97lKVRWEgZC7KYQrNRlLJTarBCCStKIWx1O5tRYmVlZTWlLJCFzSysaabUSFKK5G+xUCxknk79Xp133TePem8j37rd3/ec3/t+z7nn97v3tTqdDkxgEi3DQxaeSyktZJNs8ATtIRp0sYit7djBKAyE7mR7yI+oCa1R7aAH/47J8hr/iHcRr8CWiH9gFs/jDLdhd/G7r/hc8DGs7GfyArsizmKPo/re4FKu+5jLT+ADVgc/llK60xWpquo+9imSS+zE9uC5mS5GvBGnirxc/z8jfop7hcEG7C1Fm87kQhE/xO2I19TyuvxcSmmxGJ/GskEmh7Cp4KfxHi9reXkn0yml2WIXZ3GkLlg/E7GKKzgQ/BP24FstbwfmC4PNuNqg17eE98fVxTO8quXM1/hYn0Uv2Sc3sH6J+R6klB7hTBTMH5usxYO4N+EyzteMruNo3WhQx09EbxxsyD2Ja1VVHa8ZzeBWOZa/Jznp5gCzjLfRnF+wClMxnld9F6/xPfhhjMf8icaD6oN1hXDPQotKbMT/V/1fm/xW10NGJ5vkEi1fcMNE1p0b/f+ulBZ+AWc+aOmy4DUwAAAAAElFTkSuQmCC"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26"
+                         height="24" viewBox="0 0 26 24">
+                        <image id="youtube" width="26" height="24"
+                               xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAYCAYAAADkgu3FAAABPklEQVRIib2WvUoDQRRGjyFpxYDiEwTEQhDSRuy0EkFQH0ALm+gbyNTaWKWxsBQLizTaRAUfwEpbbVfE2NgY5JMrs2Ih7g8ze2CL3ZnhcO+duTtjkgCmgU2gSViGwKlzLjHRDHALTAaWpLwAHRNdAMuRJCmXJvoAGpFFIxMpsuSbWsa45fesCtE7sAEsAHcxRSm2K9vANvAcU7QPrALHQAs4tAIXMul/nmyvSDrxs64lzflvLUn9jPU/5I0oZdHXqge8ASv+DD6Ejug3Q0l7khqS6pK6kl5DRVSeEhF9SupJmvJjS5LuQ9foBpgHdoAJoG99DJjNWljPKXgE1oBzYBw4AHYL9cicqbOnJmlLUpKVpr/IG1EHOPJpK0VW97amegWslxWkVPqbKNazyjEy0aAC0aDSy4m9xL1uOZd8AV8w1UC3KfNIAAAAAElFTkSuQmCC"/>
+                    </svg>
+                </div>
+            </div>
+
+            <button class="btn">
+                Связаться с нами
+            </button>
+
+            <div class="rights">
+                Все права защищены, 2020
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="main-img">
+    <img src="img/main-img.png" alt="Главная картинка">
+</div>
+
+</body>
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>

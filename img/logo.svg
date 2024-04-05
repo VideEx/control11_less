@@ -1,0 +1,18 @@
+<svg id="логотип" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="61" viewBox="0 0 60 61">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-size: 8px;
+        fill: #181816;
+        font-family: AGBookPro;
+      }
+    </style>
+  </defs>
+  <circle id="лого" class="cls-1" cx="32.5" cy="33.5" r="27.5"/>
+  <image id="лого_копия" data-name="лого копия" width="57" height="57" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA5CAYAAACMGIOFAAAFF0lEQVRogd2bbYgUdRzHP7unlmVd3mV21VVeKocUembREwkmPUDXcymRookRkRESgS9UqldFr6TogaiuB8rKFKIQhYtUMNGeri7Mx+xMu7seSC/Pylvlt3xn2Zvmtpndmdmd/cIxMNzM/r/7e37YVGNjIxEhDWT06uHAxcBI4C/gF6A7qg92Y1gE7xwnMg3APcAVIrRHZM8BJgBjgePAz8DXwDbgS2A70AscC+tAYUryVmCyDn8T0AO8C+wCTgf6gd90v1fPjAEmAdOAiUAt8DvwBbAK2B3GwUohmZIkjNwiqaBpxmbgZZEaqatfNAGXATOAG/SFvAa8CfTFTfJU4ELgJeBf4D2gE9hQ7EE8YBpxIzBT9r0SaC+GbE1tbW3QZ8YD90laLwDPAuuBfUWSGQrmoL4FdsrOzb5Hy2aPBHlRUEmaCs0DLgDuBH6VJOPAJcAK4GRgAfC9388MIsmFenkXcJfUJuPjubBg9tkGnAS8oi/4mzBJLgeuA9YAT8VIzAtbFWqWAmf58QN+SD4JXKpv8Y2oTh4QXbLVRXKCnxd6vBBJCxH3y/aeBj4qM7F8WOjaq78lir/bdf8/KESyWdJ7CPhsqBeUGXtkq8uVNe0PQrIeeEcG/j4wUIEEHZiXtcxpruLoIfc/pD0eMtZzlL08V+EEHTxhAgPmy/sOghdJ86I3A4/FGAPDwCzgYeAi+ZMc3CRNTVulApsSRBAl/RYJnnf7DzfJ2bq2xXe2ULFKatua/1I3SUvZPgU6kskxWwl9ILXNIZ/kBDmdtQmzRTc26fwznBsOyRrVhe2KO0lGh2rY6Y4DckjWq6pvTzhB1DZZLy9rNWmO5ES1IraU93yhwQrsayS8HMkWlU5dyeeXxZ9K8azuTTkkraP2Q8z1YZQYrnBym8VMh+RkvwVoQjAgoVkXMKeu5wZpJyQAGUUMK8FOcUja9WAVkUSp3Y/mVI3cmeqXVIs9OjBOI4DTjOTZaiWcURlnCw0HZIZ9RnKU3G1DlZBzcBg438wwrUbtMaltNWGEmtE9aalqU0QTrnKiTh42k1YyWyfH49UpSCqaVXrlSG2T/laTNFs0AsyStHJkNXA78E/5zxYKUqqPv0IknaA5TkVzNeA8mWCOpOEPzRTurRKSl6sS2UEeyV4ltNdXiV3OlD1mly8ckqayGxVbppT3fCWjXr3jD53livyQsUFkr00mtyyGaVDcp/ifhTsu2nj8Fq2hJBHNamAN6hu7SX4sabYmlORcmdzb+TfdJC2+PKgByph4z1cyrlICsFZlVg5ukk7MtAWEtxJE0Ho6zwDr9DcIXrnq39LpjCRa6TDtm61rm2L+/5JEBadNiO7QSKySYR7VspsHhur+FxqnH5RuL9NsPpQ9t4jQUahHVYjkca2Smb4v1nx+XwXuDth5Cg6o/Ky4bFEW8aikWckS9YTfZaWNckgvqnG7Of6jFo8gnYDXlfjerRSwJcZzllQ0BN2S7FaBbUu6j2ght0cOKipbtf7T1WpKdRfTHy5mFbQ/bzHIsowrrYGrfkrRi7cemK4tlMdVNLyqGjEwSl3PHqXd1/kaeK7TIHervLFf6dp651FdF0pyKRUKK7QwlSpWW8LcQW9S8jBFee8hVeadkvwBtQjr1bWv0/LfYbVeZonUJ1LLTi05lIywfzJRI4I2uZ6qkeBU9VwGRPwnqXq/hqQN6hau1P2j0oLQEOXvQrxg+6k2nzAbtvXr7xSaDPm/IwkPwAkGRxful0HEdwAAAABJRU5ErkJggg=="/>
+  <text id="TEA_LOVERS" data-name="TEA LOVERS" class="cls-2" x="13.802" y="24.906">TEA<tspan x="13.802" dy="9.6">LOVERS</tspan></text>
+</svg>
